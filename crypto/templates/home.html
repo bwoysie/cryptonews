@@ -1,6 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <h1>Hello Patty!</h1>
 
+<div class="container">
+  <div class="row">
+    {% for x in api %}
+      <div class="card" style="width: 18rem;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+          <h5 class="card-title">{{x.title}}</h5> 
+          <p class="card-text">{{x.body}}</p> 
+          <a href="x.url" class="btn btn-secondary">Read more .....</a>
+        </div>
+      </div>
+     
+    {% endfor %}
+  </div>
+</div> 
+   <!-- <ul>
+      
+          <li> {{x.title}} </li>
+  
+     
+
+    </ul> -->
+
+    <!-- {{api}} -->
+    
+    <!-- {console.log(x)} -->
 {% endblock %}
